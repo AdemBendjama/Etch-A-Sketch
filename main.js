@@ -21,7 +21,8 @@ function impowerDivs(divs) {
     for (const div of divs) {
         div.addEventListener("mouseover", (e) => {
             console.log(e);
-            e.target.style.cssText = "background-color:black;"
+            let randomColor = getRandomColor() ;
+            e.target.style.cssText = `background-color:${randomColor};`
         });
     }
 }
@@ -63,6 +64,20 @@ function changeCssGridLayout(size) {
     //
     CONTAINER.style.cssText = `grid-template-columns: repeat(${size},1fr);
                                grid-template-rows: repeat(${size},auto);`;
+}
+
+function getRandomColor(){
+    //
+    let letters= "0123456789ABCDEF"
+    let color ="#";
+
+    for (let i = 1; i <= 6; i++) {
+        let randomArrayValue = Math.floor(Math.random()*16);
+        let randomLetter = letters[randomArrayValue]
+        color = color + randomLetter;
+    }
+
+    return color;
 }
 
 window.onload = () => {
