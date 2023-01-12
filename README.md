@@ -1,2 +1,2 @@
 # Etch-A-Sketch
-pixelated coloring board
+Project inspired from theOdinProject
