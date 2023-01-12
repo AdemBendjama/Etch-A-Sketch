@@ -11,6 +11,8 @@
 
 /***************! HTML ***************/
 body {
+    background-image: url(resources/background-grey.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
